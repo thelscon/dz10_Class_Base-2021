@@ -25,14 +25,13 @@ class TodoList {
         this.#_items.forEach ( object => { object.done = true } ) ;
     }    
 
-    //// метод для просмотра items, который нельзя менять извне
     view () {
         this.#_items.forEach ( object => { console.log( `id - ${object.id} , caption = ${object.caption} , description = ${object.description} , done - ${object.done}` ) }) ;
     }
 
 }
 
-const todoListObject = new TodoList() ;
+const todoListObject = new TodoList () ;
 todoListObject.add( 'caption1' , 'description1' ) ;
 const test = new TodoItem ( 'test' , 'test' ) ;
 todoListObject.add( 'caption2' , 'description2' ) ;
